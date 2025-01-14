@@ -64,4 +64,16 @@ dependencies {
     implementation("com.google.android.gms:play-services-tflite-support:16.1.0")
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
     implementation("org.tensorflow:tensorflow-lite-support:0.4.2")
+    // CameraX Core Library
+    implementation("androidx.camera:camera-core:1.4.0")
+
+    // CameraX Lifecycle Library (for binding camera lifecycle to LifecycleOwner)
+    implementation("androidx.camera:camera-lifecycle:1.4.0")
+
+    // CameraX View Library (for camera preview functionality)
+    implementation("androidx.camera:camera-view:1.4.0")
+
+    // CameraX Extensions Library (for additional features like HDR, Night Mode, etc.)
+    implementation("androidx.camera:camera-extensions:1.4.0")
+    implementation("com.opencsv:opencsv:5.6")
 }

@@ -1,36 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <!-- ImageView pour afficher l'image choisie -->
     <ImageView
             android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="46dp"
+            android:contentDescription="Image choisie"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bouton pour choisir une image -->
+
+    <!-- Bouton pour capturer une image -->
+
+    <!-- Bouton pour prédire la classe -->
+
+    <!-- TextView pour afficher le résultat -->
+
+    <Button
+            android:id="@+id/chooseImageButton"
+            android:layout_width="170dp"
+            android:layout_height="56dp"
+            android:text="Choisir une image"
+            android:drawableLeft="@drawable/add_img"
+            android:drawablePadding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/captureImageButton"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="14dp"
+            android:backgroundTint="#D4AF37"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="14dp" />
+
+    <Button
+            android:id="@+id/captureImageButton"
+            android:layout_width="170dp"
+            android:layout_height="56dp"
+            android:text="Capturer une image"
+            android:drawableLeft="@drawable/cam"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints"
+            android:backgroundTint="#D4AF37"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp" />
 
     <Button
             android:id="@+id/predictButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Prédire"
-            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintHorizontal_bias="0.498"
+            tools:ignore="MissingConstraints"
+            android:backgroundTint="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="115dp" />
 
     <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="30dp"
             android:text="Résultat"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/predictButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
