@@ -43,6 +43,8 @@ Cette section explore les technologies utilisées et fournit une **démonstratio
    - Le logo de l'application est placé au centre, offrant une navigation simple et intuitive.  
    - Après **2 secondes**, l'application passe automatiquement à l'interface suivante.
 
+     ![Interface d'accueil](images/premier-interface.png)
+
 ---
 
 #### 2. **Interface de Sélection et Prédiction**  
