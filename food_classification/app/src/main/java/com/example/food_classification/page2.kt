@@ -178,38 +178,45 @@ class page2 : AppCompatActivity() {
         val maxClass = maxEntry?.key ?: "$warningFlag Classe inconnue"
         val maxProbability = maxEntry?.value ?: 0f
 
-        // Vérifier si la probabilité maximale est supérieure à 0.7
+        // Vérifier si la probabilité maximale est supérieure à 0.75
         if (maxProbability <= 0.75f) {
             return "$warningFlag Classe inconnue"
         }
 
         // Charger les plats depuis le fichier CSV
-        val plats = lirePlatsDepuisCSV("plats1.csv")
+        val plats = lirePlatsDepuisCSV("plats5.csv")
 
         // Trouver le plat correspondant à la classe prédite
         val platPredicted = plats.find { it.nom.equals(maxClass, ignoreCase = true) }
 
-        // Créer la sortie formatée
-        //val italieflag = "\uD83C\uDDEE\uD83C\uDDF9"
-        //val biscuits = "biscuits"
-
         return if (platPredicted != null) {
+            // Associer le drapeau au pays avec if-else
+            val flag = if (platPredicted.pays.equals("Italie", ignoreCase = true)) {
+                "\uD83C\uDDEE\uD83C\uDDF9" // Drapeau Italie 🇮🇹
+            } else if (platPredicted.pays.equals("USA", ignoreCase = true)) {
+                "\uD83C\uDDFA\uD83C\uDDF8" // Drapeau USA 🇺🇸
+            } else if (platPredicted.pays.equals("Mexique", ignoreCase = true)) {
+                "\uD83C\uDDF2\uD83C\uDDFD" // Drapeau Mexique 🇲🇽
+            } else {
+                "🌍" // Drapeau par défaut
+            }
+
+            // Construire la sortie formatée
             val ingredients = platPredicted.ingredients.joinToString(", ")
-            val result = """
+            """
             Classe prédite : ${platPredicted.nom}
             
             Année : ${platPredicted.annee}
             
-            Pays : ${platPredicted.pays} 
+            Pays : ${platPredicted.pays} $flag
             
             Ingrédients : $ingredients 
         """.trimIndent()
-
-            result
         } else {
             "$warningFlag Classe inconnue"
         }
     }
+
 
 
     override fun onDestroy() {
