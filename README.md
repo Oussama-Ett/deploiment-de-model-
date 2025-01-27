@@ -51,7 +51,13 @@ Cette section explore les technologies utilisées et fournit une **démonstratio
      1. **Capturer une image** (via l'appareil photo).  
      2. **Importer une image** (depuis la galerie).  
      3. **Prédire** (effectuer une prédiction après capture/importation).
+
+        
      ![Interface d'accueil](images/acceuil1.png)
+
+
+
+
      ![Interface d'accueil](images/acceuil2.png) 
 
 ---
@@ -65,6 +71,22 @@ Cette section explore les technologies utilisées et fournit une **démonstratio
      - **Ingrédients**  
    - Exemple :  
      - Si une image de tiramisu est importée, l'application affichera les détails du tiramisu.
-       ![Interface d'accueil](images/test1.png) 
+    
+     
+       ![Interface d'accueil](images/test1.png)
+
+
+
+
+
+
      - Si une image de sushi est importée (non incluse dans le dataset), le message **"Classe inconnue"** s'affichera.
+    
+
+
+
+
+
+
+
        ![Interface d'accueil](images/test2.png) 
