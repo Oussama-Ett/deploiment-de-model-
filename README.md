@@ -50,7 +50,8 @@ Cette section explore les technologies utilisées et fournit une **démonstratio
    - Trois boutons principaux sont disponibles :  
      1. **Capturer une image** (via l'appareil photo).  
      2. **Importer une image** (depuis la galerie).  
-     3. **Prédire** (effectuer une prédiction après capture/importation).  
+     3. **Prédire** (effectuer une prédiction après capture/importation).
+     ![Interface d'accueil](images/acceuil1.png) ![Interface d'accueil](images/acceuil2.png) 
 
 ---
 
